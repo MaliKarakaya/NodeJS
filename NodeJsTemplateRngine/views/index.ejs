@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS index</title>
+</head>
+<body>
+    <%- include('_header') %> 
+    <h1 style="text-align: center;">EJS</h1>
+    <br>
+    <h2 style="text-align: center;"><%= yas %> </h2>
+    <br>
+    <h2 style="text-align: center;"><%= ders %> </h2>
+    <br>
+    <h2 style="text-align: center;"><%= renkler %> </h2>
+    <br>
+    <%- size %>
+    <br>
+    <h3>ad: <%= kisiler[0].ad %> id: <%= kisiler[0].id %></h3> 
+    <h3>ad: <%= kisiler[1].ad %> id: <%= kisiler[1].id %></h3>
+
+    <% kisiler.forEach(kisi => {%>
+        <%= kisi.ad %> 
+    <%}); %> 
+    <br>
+    <ul>
+    <% kisiler.forEach(kisi => { %>
+        <li><%= kisi.ad %> </li> 
+    <% }) %>
+</ul>
+
+<ul>
+
+    <% for( let index = 0; index < kisiler.length; index++ ) { %>
+    <li><%= kisiler[index].ad %> id:<%= kisiler[index].id %>  </li>
+    <% } %>
+</ul>
+
+<% if(yas<30){ %>
+   <h1>Yaş 30 dan küçükmüş</h1> 
+<% } else{%>
+        <h1>Yaş 30 dan büyükmüş</h1> 
+<%} %> 
+
+
+<%- include('_footer',{site:'malikarakaya.com'}) %> 
+
+</body>
+</html>
