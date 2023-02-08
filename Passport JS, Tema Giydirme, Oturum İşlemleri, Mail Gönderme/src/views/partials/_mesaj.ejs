@@ -1,0 +1,25 @@
+<% locals.validation_error.forEach(element => { %>
+    <div class="card bg-danger text-white shadow">
+        <div class="card-body">
+            <%- element.msg %> 
+        </div>
+    </div>
+  <% }) %>
+
+  <% locals.success_message.forEach(element => { %>
+   <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong> <%- element.msg %> </strong>
+    <button type="button" class="close" data-dismiss="aler" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+   </div>
+  <% }) %>
+
+  <% locals.login_error.forEach(error => { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+     <strong> <%- error %> </strong>
+     <button type="button" class="close" data-dismiss="aler" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+     </button>
+    </div>
+   <% }) %>
