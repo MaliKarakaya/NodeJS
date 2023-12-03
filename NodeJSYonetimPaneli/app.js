@@ -7,6 +7,9 @@ const session = require('express-session');
 //ve de çalısmak için session paketi isteyen yardımcı paket
 const flash = require('connect-flash');
 
+
+
+
 const passport = require('passport');
 
 //template engine ayarları
